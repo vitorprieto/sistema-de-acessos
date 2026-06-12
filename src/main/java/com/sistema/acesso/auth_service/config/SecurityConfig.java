@@ -34,9 +34,16 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session ->
                 session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/api/auth/**").permitAll()
-                .anyRequest().authenticated());
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(
+                                "/actuator/**"
+                        ).permitAll()
+                        .requestMatchers(
+                                HttpMethod.POST,
+                                "/api/auth/**"
+                        ).permitAll()
+                        .anyRequest().authenticated()
+                );
         return http.build();
     }
 
