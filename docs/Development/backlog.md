@@ -452,6 +452,20 @@ P2
 
 ---
 
+### Fase 11 - DevOps e Observabilidade
+
+- Docker
+- Docker Compose
+- Spring Actuator
+- Kubernetes
+- Datadog
+- Health Check
+- Metrics
+- Logs
+- Traces
+
+---
+
 # Definição de Pronto (Definition of Done)
 
 Uma funcionalidade será considerada concluída quando:
